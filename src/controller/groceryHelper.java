@@ -59,6 +59,9 @@ public class groceryHelper {
 	 */
 	public groceryItem searchForItemById(int idToEdit) {
 		// TODO Auto-generated method stub
+		
+		//this method needs an implementation for the search by an id to work after a specific object is selected to edit
+				
 		return null;
 	}
 
@@ -80,6 +83,9 @@ public class groceryHelper {
 	 */
 	public List<groceryItem> searchForItemByType(String type) {
 		// TODO Auto-generated method stub
+		
+		//these methods need implementation in order for the search to work.
+		//without them, nothing will be returned, which is why there is a null pointer exception
 		return null;
 	}
 
@@ -89,6 +95,9 @@ public class groceryHelper {
 	 */
 	public List<groceryItem> searchForItemByItem(String item) {
 		// TODO Auto-generated method stub
+		//these methods need implementation in order for the search to work.
+		//without them, nothing will be returned, which is why there is a null pointer exception
+				
 		return null;
 	}
 	
