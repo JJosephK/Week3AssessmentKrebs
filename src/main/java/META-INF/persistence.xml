@@ -5,10 +5,10 @@
 		<class>model.groceryItem</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value='jdbc:mysql://cis175.chwtk6bvw15j.us-east-1.rds.amazonaws.com/week3assessment'/>
-			<property name="javax.persistence.jdbc.user" value="admin"/>
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
-			<property name="javax.persistence.jdbc.password" value="admin19901"/>
+			<property name="javax.persistence.jdbc.url" value='jdbc:mysql://localhost:3306/shopping'/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="eclipselink.ddl-generation" value="create-tables"/>
+			<property name="javax.persistence.jdbc.password" value="SQL1984"/>
 		</properties>
 	</persistence-unit>
 </persistence>

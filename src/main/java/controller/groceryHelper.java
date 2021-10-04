@@ -58,8 +58,12 @@ public class groceryHelper {
 	 * @return
 	 */
 	public groceryItem searchForItemById(int idToEdit) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emfactory.createEntityManager(); 
+		em.getTransaction().begin();
+		
+		groceryItem found = em.find(groceryItem.class, idToEdit);
+		em.close();
+		return found;
 	}
 
 	/**
@@ -75,12 +79,19 @@ public class groceryHelper {
 	}
 
 	/**
-	 * @param storeName
+	 * @param type
 	 * @return
 	 */
 	public List<groceryItem> searchForItemByType(String type) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<groceryItem> typedQuery = em.createQuery("select li from ListItem li where li.store = :selectedStore", groceryItem.class);
+		
+		typedQuery.setParameter("selectedType", type);
+		
+		List<groceryItem> foundItems = typedQuery.getResultList();
+		em.close();
+		return foundItems;
 	}
 
 	/**
@@ -88,8 +99,15 @@ public class groceryHelper {
 	 * @return
 	 */
 	public List<groceryItem> searchForItemByItem(String item) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager em = emfactory.createEntityManager();
+		em.getTransaction().begin();
+		TypedQuery<groceryItem> typedQuery = em.createQuery("select li from ListItem li where li.item = :selectedItem", groceryItem.class);
+		
+		typedQuery.setParameter("selectedItem", item);
+		
+		List<groceryItem> foundItems = typedQuery.getResultList();
+		em.close();
+		return foundItems;
 	}
 	
 	public void cleanUp() {
